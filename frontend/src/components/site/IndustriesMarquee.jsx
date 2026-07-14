@@ -89,7 +89,7 @@ export default function IndustriesMarquee() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, delay: i * 0.05 }}
                 className="group border-r border-b border-black/10 p-6 md:p-8 min-h-[220px] flex flex-col justify-between hover:bg-[#0A0A0A] transition-colors duration-500"
-                data-testid={`industry-${it.k.toLowerCase().replace(/[^a-z]/g, "-")}`}
+                data-testid={`industry-${it.k.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "")}`}
               >
                 <div className="flex items-center justify-between">
                   <Icon
