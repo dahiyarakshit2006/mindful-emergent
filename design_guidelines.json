@@ -1,0 +1,113 @@
+{
+  "theme": "light",
+  "archetype": "Swiss & High-Contrast (Archetype 4) merged with Organic precision",
+  "typography": {
+    "headings": {
+      "family": "Space Grotesk, sans-serif",
+      "weight": "font-black",
+      "tracking": "tracking-tighter",
+      "instruction": "Used for hero and large section titles. Must feel industrial, confident, and ultra-precise."
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "weight": "font-medium",
+      "instruction": "Clean, highly legible neo-grotesque for technical specs and body copy."
+    },
+    "mono": {
+      "family": "Space Mono, monospace",
+      "weight": "font-normal",
+      "instruction": "Use for chapter numbers (01/02/03), data tables, specs, and precise industrial labels."
+    }
+  },
+  "colors": {
+    "primary": "#0A0A0A",
+    "background": "#F9F9F8",
+    "accent_cyan": "#00AEEF",
+    "accent_magenta": "#EC008C",
+    "accent_yellow": "#FFF200",
+    "surface": "#FFFFFF",
+    "border": "#E5E5E5",
+    "text_main": "#111111",
+    "text_muted": "#666666",
+    "instruction": "Base is stark white/off-white with deep obsidian. The CMYK accents (Cyan, Magenta, Yellow) are used SPARINGLY for hover states, active markers, or the registration mark logo. Do not overload with CMYK; keep it 95% monochrome."
+  },
+  "visual_enhancers": {
+    "hero_background": "Faint moving CMYK offset-dot pattern using CSS radial-gradients or a subtle Canvas implementation. Must be highly transparent (opacity 5-10%) so it doesn't distract from the typography.",
+    "borders": "1px solid #E5E5E5 (border-border). Use the 'Grid Borders' strategy to expose the skeleton in the Capabilities and Industries sections.",
+    "glassmorphism": "Used ONLY for the sticky header. High blur (backdrop-blur-xl), bg-white/70, 1px bottom border border-black/5.",
+    "images": "Spotlight/clipped frames. Product photography should have stark, high-end D2C lighting. Use clip-paths or stark square frames with generous padding."
+  },
+  "layouts": {
+    "hero": "Full-bleed container. Bold headline, masked line-by-line reveal (Framer Motion). Generous bottom padding.",
+    "manifesto": "Numbered chapters (01/02/03). Large mono numbers alongside tight, editorial text. Generous spacing (p-12 to p-24).",
+    "capabilities_grid": "Bento Grid (Tetris Mode). Asymmetrical spanning. col-span-full for 'Labels', col-span-4 for 'Thermal Ribbons', etc. 1px borders.",
+    "marquee": "Slow editorial marquee for Industries Served. Massive outline text (text-8xl) running in background OR refined serif/mono text with massive gaps (gap-32) running foreground."
+  },
+  "motion": {
+    "scrolling": "Lenis for smooth scrolling. Momentum-based.",
+    "hero_reveal": "Framer motion: initial { y: '100%', opacity: 0 }, animate { y: 0, opacity: 1 }, transition { staggerChildren: 0.1 } with overflow-hidden on parent to create the masked line-by-line reveal.",
+    "parallax": "Subtle Framer Motion useTransform based on scrollYProgress for the hero background or product images.",
+    "hover_states": "Micro-interactions: buttons stretch slightly, images scale up by 1.02, subtle CMYK drop-shadow on hover."
+  },
+  "components": {
+    "header": {
+      "path": "custom",
+      "instruction": "Sticky top-0, z-50. Glassmorphism bg-white/70 backdrop-blur-xl. Logo on left, anchor links center, 'Get a Quote' solid black pill button right."
+    },
+    "button": {
+      "path": "ui/button",
+      "instruction": "Pill-shaped (rounded-full) or ultra-sharp rectangular. Dark background, white text. Hover state: invert colors or subtle scale."
+    },
+    "form": {
+      "path": "ui/form",
+      "instruction": "Use Shadcn Form, Input, Select, Textarea. Clean, bottom-border-only (flushed) inputs for a premium editorial feel, rather than standard boxes."
+    }
+  },
+  "image_urls": {
+    "printing_press_macro": {
+      "url": "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTN8MHwxfHNlYXJjaHwxfHxwcmludGluZyUyMHByZXNzJTIwbWFjaGluZXxlbnwwfHx8fDE3ODQwNTM4NjV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Detailed view of printing rollers. Best for the background or subtle parallax moments.",
+      "category": "Hero / Abstract Background"
+    },
+    "industrial_factory": {
+      "url": "https://images.unsplash.com/photo-1610891015188-5369212db097?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwcHJpbnRpbmclMjBmYWN0b3J5fGVufDB8fHx8MTc4NDA1Mzg2NXww&ixlib=rb-4.1.0&q=85",
+      "description": "Clean industrial machinery pipelines. Good for the 'About / Credibility' section.",
+      "category": "About Section"
+    },
+    "premium_boxes": {
+      "url": "https://images.unsplash.com/photo-1570658847330-708619301f21?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHw0fHxwcmVtaXVtJTIwcHJvZHVjdCUyMHBhY2thZ2luZyUyMGJveGVzfGVufDB8fHx8MTc4NDA1Mzg2Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Premium cosmetic/medical packaging example for the 'Rigid Boxes' product feature.",
+      "category": "Capabilities: Rigid Boxes"
+    },
+    "label_rolls": {
+      "url": "https://images.unsplash.com/photo-1569725730478-a2f4a1809bb4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHw0fHxwcm9kdWN0JTIwbGFiZWxzJTIwcm9sbHN8ZW58MHx8fHwxNzg0MDUzODY2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Product label rolls for the 'Labels' core capability.",
+      "category": "Capabilities: Labels"
+    },
+    "smartphone_packaging": {
+      "url": "https://images.unsplash.com/photo-1760225529221-841ebb8e7867?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHw0fHxzbWFydHBob25lJTIwYm94JTIwcGFja2FnaW5nfGVufDB8fHx8MTc4NDA1Mzg2Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Premium white smartphone box for 'Phone Packaging' deep-dive.",
+      "category": "Capabilities: Phone Packaging"
+    }
+  },
+  "svg_logo_instruction": "Create an inline SVG logo composed of 4 overlapping circles or abstract geometric 'M' lines. Apply CSS mix-blend-mode: multiply. Colors: Cyan (#00AEEF), Magenta (#EC008C), Yellow (#FFF200), Black (#000000). Offset them slightly to simulate a misaligned print registration mark. The wordmark should read 'MINDFUL PRINTS' in geometric sans.",
+  "instructions_to_main_agent": [
+    "Install lenis (@studio-freight/react-lenis) and framer-motion.",
+    "Install lucide-react for icons.",
+    "Since the project uses .js files, ensure all React components are built in .jsx / .js and not TypeScript.",
+    "Do NOT use a generic corporate template. Embrace generative minimalism and generous white space.",
+    "Implement the masked line-by-line reveal for the H1 in the hero section.",
+    "Use grid lines (border-collapse and 1px borders) to give a structural, architectural feel.",
+    "Ensure 'Get a Quote' form connects to FastAPI backend (POST /api/quote) with a Product Interest dropdown.",
+    "Include a Google Map iframe for Sector 63, Noida.",
+    "Create a slow marquee using framer-motion or react-fast-marquee for industries served.",
+    "Use raw HTML/Tailwind for large layout structures to avoid Shadcn limitations, only using Shadcn for interactive components (Forms, Inputs)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not make generic centered layouts. Create depth through layered design elements.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Add micro-animations to every interactive element (hover, focus states).",
+    "Do NOT use AI emojis (e.g., 🤖, 💡, 🚀) as icons.",
+    "Ensure 'data-testid' attributes exist on all interactive elements (buttons, inputs, links)."
+  ]
+}
